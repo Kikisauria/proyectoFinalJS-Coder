@@ -111,7 +111,12 @@ const toggleButton = document.getElementById('dark-mode-toggle');
         }
 
         localStorage.setItem('carritoJson', JSON.stringify(carrito));
-        alert(`${producto.nombre} se ha agregado al carrito.`);
+        Swal.fire({
+            title: 'Agregado!',
+            text: `${producto.nombre} se ha agregado al carrito.`,
+            icon: 'succes',
+            confirmButtonText: 'Continuar comprando'
+        })
     }
 
     function mostrarCarrito() {
