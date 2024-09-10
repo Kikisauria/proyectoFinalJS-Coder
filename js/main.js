@@ -1,7 +1,7 @@
 const toggleButton = document.getElementById('dark-mode-toggle');
 const nodoPadre = document.getElementById('nodoPadre');
-const API_KEY = '16bd78cdc8dd456a8b9c24ff5b1d0348'
-const URL = 'https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}'
+
+const URL = "http://ip-api.com/json/?fields=regionName,city,zip,query"
 
 const llamadoraGeoLocalizacion = async () => {
     const response = await fetch(URL);
